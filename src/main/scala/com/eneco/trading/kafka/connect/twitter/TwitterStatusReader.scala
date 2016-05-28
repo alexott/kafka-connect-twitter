@@ -13,7 +13,7 @@ import Extensions._
 
 class StatusEnqueuer(queue: LinkedBlockingQueue[Status]) extends StatusListener with Logging {
   override def onStallWarning(stallWarning: StallWarning) = log.warn("onStallWarning")
-  override def onDeletionNotice(statusDeletionNotice: StatusDeletionNotice) = log.info("onDeletionNotice")
+  override def onDeletionNotice(statusDeletionNotice: StatusDeletionNotice) = log.debug("onDeletionNotice")
 
   override def onScrubGeo(l: Long, l1: Long) = {
     log.debug(s"onScrubGeo $l $l1")
