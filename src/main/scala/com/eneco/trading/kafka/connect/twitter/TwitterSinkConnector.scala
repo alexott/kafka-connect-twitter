@@ -47,6 +47,10 @@ class TwitterSinkConnector extends SinkConnector with Logging {
     }
   }
 
+  override def config() = {
+    TwitterSinkConfig.config
+  }
+
   override def stop(): Unit = {}
   override def version(): String = ""
 }

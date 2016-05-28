@@ -49,6 +49,10 @@ class TwitterSourceConnector extends Connector with Logging {
     }
   }
 
+  override def config() = {
+    TwitterSourceConfig.config
+  }
+
   override def stop() = {}
   override def version(): String = ""
 }
